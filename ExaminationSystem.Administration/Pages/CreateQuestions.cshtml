@@ -1,0 +1,13 @@
+﻿@page
+@model ExaminationSystem.Administration.Pages.CreateQuestionsModel
+@{
+}
+
+<h1>Create Quiz</h1>
+<form method="post">
+    <input type="text" asp-for="CreateQuizDetails.Questions.FirstOrDefault().Text" placeholder="Question Text" />
+
+    <input type="checkbox" asp-for="CreateQuizDetails.Questions.FirstOrDefault().Type" placeholder="Description" />
+
+    <button type="submit">Create</button>
+</form>

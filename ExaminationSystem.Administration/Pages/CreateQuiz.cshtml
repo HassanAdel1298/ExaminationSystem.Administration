@@ -1,0 +1,21 @@
+﻿@page
+@model ExaminationSystem.Administration.Pages.CreateQuizModel
+@{
+}
+
+<h1>Create Quiz</h1>
+<form method="post">
+    <input type="text" asp-for="Quiz.Name" placeholder="Quiz Name"/>
+    <br />
+    <br />
+    <br />
+    <input type="text" asp-for="Quiz.Description" placeholder="Description" />
+    <br />
+    <br />
+    <br />
+    <input type="datetime-local" asp-for="Quiz.DateOfQuiz" placeholder="Date Of Quiz" />
+    <br />
+    <br />
+    <br />
+    <button type="submit">Create</button>
+</form>

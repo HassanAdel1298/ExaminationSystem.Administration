@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List of Quizzes</h1>
+    @if (Model.Quizzes?.Count() > default(int))
+    {
+        <form method="post">
+            <table class="table table-striped border">
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Description
+                    </td>
+                    <td>
+                        Image
+                    </td>
+                    <td>
+                        Date Of Quiz
+                    </td>
+                    <td>
+                        Create Questions
+                    </td>
+
+                </tr>
+                @foreach (var Quiz in Model.Quizzes)
+                {
+                    <tr>
+                        <th>
+                            @Quiz.Name
+                        </th>
+                        <th>
+                            @Quiz.Description
+                        </th>
+                        <th>
+                            @Quiz.Image
+                        </th>
+                        <th>
+                            @Quiz.DateOfQuiz
+                        </th>
+                        <th>
+                            <button asp-page="/CreateQuestions/@Quiz.Id">Create Questions</button>
+                        </th>
+
+                    </tr>
+                }
+
+            </table>
+        </form>
+    }
+    else
+    {
+        <p class="text-danger">No Quizzes Available</p>
+    }
+</div>
+
