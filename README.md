@@ -1,1 +1,1 @@
-# ExaminationSystem.Administration
+Project For Instructor (Razor Pages)
